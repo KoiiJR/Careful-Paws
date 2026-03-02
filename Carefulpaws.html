@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Careful Paws — Premium Pet Boarding</title>
+
+<style>
+:root {
+  --color-bg: #fdf5ec;
+  --color-text: #3b2f2f;
+  --color-primary: #a97451;
+  --color-muted: #f4e8dc;
+  --space-xs: 0.5rem;
+  --space-sm: 1rem;
+  --space-md: 2rem;
+  --space-lg: 4rem;
+  --radius: 12px;
+  --max-width: 1100px;
+}
+
+*,
+*::before,
+*::after { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  line-height: 1.6;
+  background: var(--color-bg);
+  color: var(--color-text);
+  cursor: url('paw.png'), auto;
+}
+
+img { max-width: 100%; display: block; }
+.container { width: 90%; max-width: var(--max-width); margin-inline: auto; }
+
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+}
+.skip-link:focus {
+  left: 1rem;
+  top: 1rem;
+  background: white;
+  padding: var(--space-sm);
+  border: 2px solid black;
+  z-index: 1000;
+}
+:focus-visible { outline: 3px solid var(--color-primary); outline-offset: 2px; }
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: var(--space-md);
+  padding: 0;
+  margin: 0;
+}
+nav a { text-decoration: none; color: var(--color-text); }
+.logo { font-weight: bold; font-size: 1.25rem; }
+.logo img { max-height: 40px; width: auto; margin-right: 0.5rem; vertical-align: middle; }
+
+.hero {
+  padding-block: var(--space-lg);
+  text-align: center;
+  background: #fff7ee;
+}
+.hero-image {
+  width: 100%;
+  max-width: 450px;
+  display: block;
+  margin: 0 auto var(--space-md) auto;
+  border-radius: var(--radius);
+  object-fit: contain;
+}
+.hero h1 {
+  font-size: clamp(2rem, 4vw, 3rem);
+  margin-bottom: var(--space-sm);
+  font-weight: 500;
+}
+.button {
+  display: inline-block;
+  background: var(--color-primary);
+  color: white;
+  padding: var(--space-sm) var(--space-md);
+  border-radius: var(--radius);
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+.button:hover { background: #8c5c3c; }
+
+section { padding-block: var(--space-lg); }
+
+.features { background: var(--color-muted); }
+.feature-grid {
+  display: grid;
+  gap: var(--space-md);
+}
+.feature-grid article img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: var(--radius);
+}
+@media (min-width: 768px) {
+  .feature-grid { grid-template-columns: repeat(3, 1fr); }
+}
+
+.about { background: #f4e8dc; }
+.about img {
+  width: 100%;
+  max-width: 500px;
+  display: block;
+  margin: 0 auto var(--space-md) auto;
+  border-radius: var(--radius);
+}
+
+form {
+  max-width: 600px;
+  margin-inline: auto;
+}
+.form-group { display: flex; flex-direction: column; margin-bottom: var(--space-md); }
+label { margin-bottom: var(--space-xs); }
+input, textarea {
+  padding: var(--space-sm);
+  border: 1px solid #ccc;
+  border-radius: var(--radius);
+  font: inherit;
+}
+button {
+  background: var(--color-primary);
+  color: white;
+  padding: var(--space-sm) var(--space-md);
+  border: none;
+  border-radius: var(--radius);
+  cursor: pointer;
+}
+
+footer {
+  padding-block: var(--space-md);
+  border-top: 1px solid #e0e0e0;
+  text-align: center;
+  font-size: 0.9rem;
+}
+</style>
+</head>
+<body>
+
+<a class="skip-link" href="#main-content">Skip to content</a>
+
+<header class="site-header">
+  <div class="container">
+    <nav aria-label="Primary navigation">
+      <a href="#main-content" class="logo">
+        <img src="https://github.com/KoiiJR/Careful-Paws/blob/main/Careful%20paws%20logo.png?raw=true" alt="Careful Paws logo">
+        Careful Paws
+      </a>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main-content">
+
+  <section class="hero container">
+    <img src="https://github.com/KoiiJR/Careful-Paws/blob/main/Welcome%20to.png?raw=true" alt="Welcome to Careful Paws" class="hero-image">
+    <h1>🐾 Safe, happy, and loving boarding for your furry friends — run with care and passion.</h1>
+    <p>We provide a stress-free environment where pets feel at home, even when you're away.</p>
+    <a href="#contact" class="button" title="We’d love to meet your pet!">Book a Visit</a>
+  </section>
+
+  <section class="features">
+    <div class="container">
+      <h2>🐾 Our Services</h2>
+      <div class="feature-grid">
+        <article>
+         <img src="https://github.com/KoiiJR/Careful-Paws/blob/main/Luxury%20kennel.png?raw=true" alt="Cozy dog boarding room">
+          <h3>Boarding & Daycare</h3>
+          <p>Safe, clean spaces with attentive care — because every pet deserves comfort.</p>
+        </article>
+        <article>
+          <img src="https://github.com/KoiiJR/Careful-Paws/blob/main/Dog%20playing.png?raw=true" alt="Dogs playing in yard">
+          <h3>Personalized Attention</h3>
+          <p>We treat each pet like our own — playtime, walks, and cuddles included.</p>
+        </article>
+        <article>
+          <img src="https://github.com/KoiiJR/Careful-Paws/blob/main/Quick%20care.png?raw=true" alt="Pet receiving health care">
+          <h3>Health & Safety</h3>
+          <p>Vaccination checks, emergency protocols, and daily wellness updates for peace of mind.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="about">
+    <div class="container">
+      <h2>🐾 About Careful Paws</h2>
+      <p>Careful Paws was founded to provide loving care for pets when families are away. As a pet lover myself, I wanted to create a space where animals feel safe, happy, and part of the family.</p>
+      <p>Every decision — from play areas to meal plans — is designed with the pet’s comfort and well-being in mind. Our mission is to make pet boarding stress-free for both animals and owners.</p>
+      <p>Running this kennel has taught me patience, attention to detail, and how small touches make a big difference — and I hope this site shows our commitment to care and love.</p>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="container">
+      <h2>🐾 Contact Us</h2>
+      <p>We’d love to meet your pet! Whether you have questions, want a tour, or are ready to book, please get in touch.</p>
+      <form>
+        <div class="form-group">
+          <label for="name">Full Name</label>
+          <input type="text" id="name" name="name" required placeholder="Your Name">
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" name="email" required placeholder="you@example.com">
+        </div>
+
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" required placeholder="Tell us about your pet or ask a question"></textarea>
+        </div>
+
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="container">
+    <p>&copy; 2026 Careful Paws. Where pets are family, cared for with love and attention.</p>
+  </div>
+</footer>
+
+</body>
+</html>
